@@ -1,1 +1,1 @@
-A mobile Medical App
+A medical mobile App
