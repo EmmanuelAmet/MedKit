@@ -4,17 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    tools:context=".SignUpActivity">
 
-    <ImageView
-        android:id="@+id/logo_image"
-        android:layout_width="100dp"
-        android:layout_height="25.89dp"
-        app:layout_constraintBottom_toTopOf="@+id/email_text"
+
+    <EditText
+        android:id="@+id/phone_text"
+        android:layout_width="295dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="396dp"
+        android:background="@drawable/textview_bg"
+        android:ems="10"
+        android:hint="PhoneNumber"
+        android:inputType="phone"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/med_kit_logo2" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/fullname_text"
@@ -22,14 +27,56 @@
         android:layout_height="50dp"
         android:background="@drawable/textview_bg"
         android:ems="10"
-        android:hint="Email/Username"
-        android:inputType="textEmailAddress"
+        android:hint="FullName"
+        android:inputType="text"
         android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/password_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.857" />
+        app:layout_constraintVertical_bias="0.595" />
+
+    <EditText
+        android:id="@+id/email_text"
+        android:layout_width="295dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="184dp"
+        android:background="@drawable/textview_bg"
+        android:ems="10"
+        android:hint="Email/Username"
+        android:inputType="textEmailAddress"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/confirm_password_text"
+        android:layout_width="295dp"
+        android:layout_height="50dp"
+        android:background="@drawable/textview_bg"
+        android:ems="10"
+        android:hint="Re-Type Password"
+        android:inputType="textPassword"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.536" />
+
+
+    <ImageView
+        android:id="@+id/logo_image"
+        android:layout_width="100dp"
+        android:layout_height="25.89dp"
+        app:layout_constraintBottom_toTopOf="@+id/email_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.43"
+        app:srcCompat="@drawable/med_kit_logo2" />
 
     <EditText
         android:id="@+id/password_text"
@@ -37,14 +84,14 @@
         android:layout_height="50dp"
         android:background="@drawable/textview_bg"
         android:ems="10"
-        android:hint="Password"
+        android:hint="Create Password"
         android:inputType="textPassword"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.294" />
+        app:layout_constraintVertical_bias="0.412" />
 
     <Button
         android:id="@+id/sign_in_button"
@@ -58,53 +105,24 @@
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password_text"
-        app:layout_constraintVertical_bias="0.142" />
-
-    <Button
-        android:id="@+id/forgot_password_button"
-        android:layout_width="wrap_content"
-        android:layout_height="12.32dp"
-        android:background="@android:color/transparent"
-        android:fontFamily="@font/open_sans_light"
-        android:text="Forgot Your Password?"
-        android:textAlignment="center"
-        android:textSize="9sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.517"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sign_in_button"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.598" />
 
     <TextView
         android:id="@+id/alternate_sign_in_text"
         android:layout_width="121dp"
         android:layout_height="12.32dp"
+        android:layout_marginBottom="108dp"
         android:fontFamily="@font/open_sans"
         android:text="Or sign in with"
         android:textAlignment="center"
         android:textSize="10.14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/forgot_password_button"
-        app:layout_constraintVertical_bias="0.109" />
-
-    <ImageButton
-        android:id="@+id/facebook_button"
-        android:layout_width="26dp"
-        android:layout_height="26dp"
-        android:background="@color/cardview_shadow_end_color"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.433"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/alternate_sign_in_text"
-        app:layout_constraintVertical_bias="0.069"
-        app:srcCompat="@drawable/facebook" />
+        app:layout_constraintHorizontal_bias="0.441"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
         android:id="@+id/gmail_button"
@@ -113,31 +131,23 @@
         android:background="@color/cardview_shadow_end_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintHorizontal_bias="0.046"
         app:layout_constraintStart_toEndOf="@+id/facebook_button"
         app:layout_constraintTop_toBottomOf="@+id/alternate_sign_in_text"
-        app:layout_constraintVertical_bias="0.053"
+        app:layout_constraintVertical_bias="0.252"
         app:srcCompat="@drawable/gmail" />
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigationView"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@color/dark_blue"
-        android:textAlignment="center"
+    <ImageButton
+        android:id="@+id/facebook_button"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:background="@color/cardview_shadow_end_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.389"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/bottom_nav_menu">
-
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="New Here? Sign Up"
-            android:background="@android:color/transparent"
-            android:textColor="@color/white_color" />
-    </com.google.android.material.bottomnavigation.BottomNavigationView>
+        app:layout_constraintTop_toBottomOf="@+id/alternate_sign_in_text"
+        app:layout_constraintVertical_bias="0.271"
+        app:srcCompat="@drawable/facebook" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
