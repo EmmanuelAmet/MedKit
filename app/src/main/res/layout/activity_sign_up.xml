@@ -94,12 +94,12 @@
         app:layout_constraintVertical_bias="0.412" />
 
     <Button
-        android:id="@+id/sign_in_button"
+        android:id="@+id/sign_up_button"
         android:layout_width="140dp"
         android:layout_height="44dp"
         android:background="@drawable/sign_in"
         android:fontFamily="@font/poppins_light"
-        android:text="SIGN IN"
+        android:text="SIGN UP"
         android:textAlignment="center"
         android:textColor="#F1EDED"
         android:textSize="16sp"
