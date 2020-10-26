@@ -99,6 +99,7 @@
         android:layout_height="44dp"
         android:background="@drawable/sign_in"
         android:fontFamily="@font/poppins_light"
+        android:onClick="onSignUp"
         android:text="SIGN UP"
         android:textAlignment="center"
         android:textColor="#F1EDED"

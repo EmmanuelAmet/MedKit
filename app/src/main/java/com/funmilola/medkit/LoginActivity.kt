@@ -19,8 +19,6 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var inputEmail: EditText;
     private lateinit var inputPassword:EditText
     private lateinit var auth: FirebaseAuth
-    private val progressBar: ProgressBar?=null
-    private lateinit var btnLogin:Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,18 +26,6 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_login)
         //Initialize Firebase Auth
         auth = Firebase.auth
-//        //Get User Inputs
-//        inputEmail = findViewById(R.id.email_text);
-//        inputPassword = findViewById(R.id.password_text);
-//        btnLogin =  findViewById(R.id.sign_in_button);
-//
-//        //Get Firebase auth instance
-//        auth = FirebaseAuth.getInstance();
-//
-//
-//        btnLogin!!.setOnClickListener(){
-//            auth!!.signInWithEmailAndPassword(email, password)
-//        }
 
     }
 
@@ -54,7 +40,7 @@ class LoginActivity : AppCompatActivity() {
         }
         inputPassword = findViewById(R.id.password_text)
         val password = inputPassword.text.toString()
-        if(inputPassword==null|| password==""){
+        if(password==null|| password==""){
             Toast.makeText(this, "Password field cannot be empty!", Toast.LENGTH_SHORT).show()
             return;
         }
@@ -75,8 +61,8 @@ class LoginActivity : AppCompatActivity() {
 
                 // ...
             }
-//        val intent = Intent(this, WelcomeActivity::class.java)
-//        startActivity(intent)
+        val intent = Intent(this, WelcomeActivity::class.java)
+        startActivity(intent)
     }
 
     fun signUp(view: View?){
