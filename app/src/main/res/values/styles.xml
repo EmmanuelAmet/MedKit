@@ -26,5 +26,8 @@
         <item name="android:textColor">@color/colorPurple</item>
     </style>
 
+    <style name="SplashTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/bg_splash</item>
+    </style>
 
 </resources>

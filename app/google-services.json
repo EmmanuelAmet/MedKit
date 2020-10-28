@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "318278545264",
+    "firebase_url": "https://medkit-ed448.firebaseio.com",
+    "project_id": "medkit-ed448",
+    "storage_bucket": "medkit-ed448.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:318278545264:android:7b83c24905fdbd9e1569b5",
+        "android_client_info": {
+          "package_name": "com.funmilola.medkit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "318278545264-jl30lhrui08lrps16ube419tcc0s304v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBuZcBfV1CJWaZ211vja_Yu00XILYWlR70"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "318278545264-jl30lhrui08lrps16ube419tcc0s304v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
