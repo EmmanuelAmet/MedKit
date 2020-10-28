@@ -87,7 +87,7 @@ class ScanActivity : BaseMvpActivity<ScanActivityContract.View, ScanActivityCont
     }
 
     override fun showSuccessScanningDialog(result: String) {
-        val mDialogView = LayoutInflater.from(this).inflate(R.layout.activity_drug_identified, null)
+        val mDialogView = LayoutInflater.from(this).inflate(R.layout.activity_drugs_identified, null)
         val dialogBuilder = AlertDialog.Builder(this)
             .setView(mDialogView)
 //        mDialogView.tvResult.text = result
