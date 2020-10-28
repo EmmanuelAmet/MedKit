@@ -24,7 +24,13 @@
     <string name="onboarding_slide1_subtitle">Connect with people around the world</string>
     <string name="onboarding_slide1_headline">DRUG IDENTIFIER</string>
     <string name="onboarding_slide1_desc">MedKit Allows you scan and identify legal drugs in pharmacies and other distrubutors.</string>
-
+    <string name="share">Share</string>
+    <string name="text_copied">Copied to clipboard</string>
+    <string name="history">History</string>
+    <string name="qr_hint">Hover to QR-code</string>
+    <string name="privacy_policy"><u>Privacy policy</u></string>
+    <string name="flashlight_turned_on">Flashlight turned on</string>
+    <string name="flashlight_turned_off">Flashlight turned off</string>
     <string name="onboarding_slide2_title">Login to your account</string>
     <string name="onboarding_slide2_subtitle">Let\'s build connection with new people</string>
     <string name="onboarding_slide2_headline">MEET A DOC</string>

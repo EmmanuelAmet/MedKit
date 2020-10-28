@@ -3,6 +3,12 @@
     package="com.funmilola.medkit">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
 
     <application
         android:allowBackup="true"
@@ -11,6 +17,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".feature.drugs_identified.DrugsIdentifiedActivity"></activity>
+        <activity android:name=".feature.mvp.BaseMvpActivity" />
+        <activity android:name=".feature.scan_splash.ScanSplashActivity" />
+        <activity android:name=".feature.scan.ScanActivity" />
+        <activity android:name=".DoctorProfileActivity" />
+        <activity android:name=".MeetADoctorActivity" />
         <activity android:name=".WelcomeActivity">
             android:parentActivityName=".LoginActivity">
             <!-- The meta-data tag is required if you support API level 15 and lower -->
@@ -22,14 +34,14 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".feature.onboarding.OnBoardingActivity"
-            android:theme="@style/AppTheme.OnBoarding">
-        </activity>
+        <activity
+            android:name=".feature.onboarding.OnBoardingActivity"
+            android:theme="@style/AppTheme.OnBoarding" />
 
         <meta-data
             android:name="preloaded_fonts"
