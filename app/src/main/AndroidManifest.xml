@@ -21,7 +21,7 @@
         <activity android:name=".feature.user_profile.UserProfileActivity" />
         <activity android:name=".feature.drugs_identified.DrugsIdentifiedActivity" />
         <activity android:name=".feature.mvp.BaseMvpActivity" />
-        <activity android:name=".feature.onboarding.OnBoardingActivity" />
+        <activity android:name=".feature.scan_splash.ScanSplashActivity" />
         <activity android:name=".DoctorProfileActivity" />
         <activity android:name=".MeetADoctorActivity" />
         <activity android:name=".WelcomeActivity">
@@ -34,8 +34,7 @@
         <activity android:name=".SignUpActivity" />
         <activity android:name=".LoginActivity" />
         <activity
-            android:name=".feature.scan_splash.ScanSplashActivity"
-            android:theme="@style/SplashTheme">
+            android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -43,7 +42,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".feature.onboarding.OnBoardingActivity"
             android:theme="@style/AppTheme.OnBoarding" />
 
         <meta-data
