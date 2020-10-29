@@ -17,11 +17,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".feature.user_profile.UserProfileActivity"></activity>
+        <activity android:name=".feature.scan.ScanActivity"></activity>
+        <activity android:name=".feature.user_profile.UserProfileActivity" />
         <activity android:name=".feature.drugs_identified.DrugsIdentifiedActivity" />
         <activity android:name=".feature.mvp.BaseMvpActivity" />
-        <activity android:name=".feature.scan_splash.ScanSplashActivity" />
-        <activity android:name=".feature.scan.ScanActivity" />
+        <activity android:name=".MainActivity" />
         <activity android:name=".DoctorProfileActivity" />
         <activity android:name=".MeetADoctorActivity" />
         <activity android:name=".WelcomeActivity">
@@ -33,7 +33,9 @@
         </activity>
         <activity android:name=".SignUpActivity" />
         <activity android:name=".LoginActivity" />
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".feature.scan_splash.ScanSplashActivity"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
