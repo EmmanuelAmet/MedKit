@@ -30,7 +30,7 @@
                 android:orientation="vertical">
 
                 <EditText
-                    android:id="@+id/fullname_text"
+                    android:id="@+id/login_email_text"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_margin="20dp"
@@ -58,6 +58,7 @@
                     android:layout_gravity="center"
                     android:background="@drawable/sign_in"
                     android:fontFamily="@font/poppins_light"
+                    android:onClick="onLogin"
                     android:text="SIGN IN"
                     android:textAlignment="center"
                     android:textColor="#F1EDED"
