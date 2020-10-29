@@ -1,22 +1,26 @@
 package com.funmilola.medkit.feature.scan
 
-import android.app.AlertDialog
 import android.content.Intent
 import android.net.Uri
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
+import androidx.appcompat.app.AlertDialog
 import com.funmilola.medkit.R
+import com.funmilola.medkit.WelcomeActivity
+import com.funmilola.medkit.feature.drugs_identified.DrugsIdentifiedActivity
 import com.funmilola.medkit.feature.mvp.BaseMvpActivity
 import com.funmilola.medkit.utils.Constants
+import com.google.api.ResourceDescriptor
 import com.google.zxing.Result
 import kotlinx.android.synthetic.main.activity_scan.*
 import me.dm7.barcodescanner.zxing.ZXingScannerView
-
+import java.text.DateFormat
+import java.util.*
 
 class ScanActivity : BaseMvpActivity<ScanActivityContract.View, ScanActivityContract.Presenter>(),
     ScanActivityContract.View, View.OnClickListener, ZXingScannerView.ResultHandler {
-
     private var mScannerView: ZXingScannerView? = null
     private var flashState: Boolean = false
     private var dialog: AlertDialog? = null
@@ -26,9 +30,9 @@ class ScanActivity : BaseMvpActivity<ScanActivityContract.View, ScanActivityCont
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_scan)
 
-        //mHistoryOrm = HistoryORM()
+
         initUI()
     }
 
@@ -51,6 +55,7 @@ class ScanActivity : BaseMvpActivity<ScanActivityContract.View, ScanActivityCont
         privacyPolicyTextView.setOnClickListener(this)
     }
 
+
     override fun onClick(v: View) {
         when(v.id) {
             R.id.btnLight -> {
@@ -66,9 +71,9 @@ class ScanActivity : BaseMvpActivity<ScanActivityContract.View, ScanActivityCont
                     flashState = true
                 }
             }
-//            R.id.btnHistory -> {
-//                startActivity(Intent(this, HistoryActivity::class.java))
-//            }
+            R.id.btnHistory -> {
+                //startActivity(Intent(this, HistoryActivity::class.java))
+            }
             R.id.privacyPolicyTextView -> {
                 val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(Constants.privacyPolicy))
                 startActivity(browserIntent)
@@ -82,29 +87,13 @@ class ScanActivity : BaseMvpActivity<ScanActivityContract.View, ScanActivityCont
 //            result?.text.toString()
 //        )
 //        mHistoryOrm?.add(this, history)
-//        mPresenter.qrCodeScanned(history)
+        //mPresenter.qrCodeScanned(history)
 
     }
 
     override fun showSuccessScanningDialog(result: String) {
-        val mDialogView = LayoutInflater.from(this).inflate(R.layout.activity_drugs_identified, null)
-        val dialogBuilder = AlertDialog.Builder(this)
-            .setView(mDialogView)
-//        mDialogView.tvResult.text = result
-//        mDialogView.btnSearch.setOnClickListener {
-//            mPresenter.searchByResultBtnPressed(result)
-//        }
-//        mDialogView.btnCopy.setOnClickListener {
-//            mPresenter.copyResultBtnPressed(result)
-//        }
-//        mDialogView.btnShare.setOnClickListener {
-//            mPresenter.shareResultBtnPressed(result)
-//        }
-        dialog = dialogBuilder.create()
-        dialog?.setOnCancelListener {
-            continueScanning()
-        }
-        dialog?.show()
+        val intent = Intent(this, DrugsIdentifiedActivity::class.java)
+        startActivity(intent)
     }
 
     override fun continueScanning() {
