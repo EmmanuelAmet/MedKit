@@ -21,7 +21,7 @@
         <activity android:name=".feature.user_profile.UserProfileActivity" />
         <activity android:name=".feature.drugs_identified.DrugsIdentifiedActivity" />
         <activity android:name=".feature.mvp.BaseMvpActivity" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".feature.onboarding.OnBoardingActivity" />
         <activity android:name=".DoctorProfileActivity" />
         <activity android:name=".MeetADoctorActivity" />
         <activity android:name=".WelcomeActivity">
@@ -43,7 +43,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".feature.onboarding.OnBoardingActivity"
+            android:name=".MainActivity"
             android:theme="@style/AppTheme.OnBoarding" />
 
         <meta-data
