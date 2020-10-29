@@ -33,7 +33,7 @@ class LoginActivity : AppCompatActivity() {
 
 
     fun onLogin(view: View?) {
-        inputEmail = findViewById(R.id.email_text)
+        inputEmail = findViewById(R.id.login_email_text)
         val email = inputEmail.text.toString()
         if(email==null || email==""){
             Toast.makeText(this, "Email field cannot be empty!", Toast.LENGTH_SHORT).show()
@@ -53,6 +53,8 @@ class LoginActivity : AppCompatActivity() {
                     // Sign in success, update UI with the signed-in user's information
                     Log.d(TAG, "signInWithEmail:success")
                     val user = auth.currentUser
+                    val intent = Intent(this, WelcomeActivity::class.java)
+                    startActivity(intent)
                 } else {
                     // If sign in fails, display a message to the user.
                     Log.w(TAG, "signInWithEmail:failure", task.exception)
@@ -62,8 +64,6 @@ class LoginActivity : AppCompatActivity() {
 
                 // ...
             }
-        val intent = Intent(this, WelcomeActivity::class.java)
-        startActivity(intent)
     }
 
     fun signUp(view: View?){
