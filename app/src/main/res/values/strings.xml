@@ -35,5 +35,8 @@
     <string name="onboarding_slide2_subtitle">Let\'s build connection with new people</string>
     <string name="onboarding_slide2_headline">MEET A DOC</string>
     <string name="onboarding_slide2_desc">A key feature that allows you find, call and meet doctors around you..</string>
+    <string name="nasa_api_key">vhffBqdirTXkXsS1qjKlAMkWx2CtBzNDI5MJwd06</string>
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="change_layout_manager">Change Layout</string>
 
 </resources>
