@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/user_profile_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".feature.user_profile.UserProfileActivity">
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorWhite"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    <ImageView
+        android:id="@+id/banner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/blue_rounded_rectangle"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/med_icons3" />
+
+    <ImageView
+        android:id="@+id/profile_image_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/banner"
+        app:layout_constraintVertical_bias="0.218"
+        app:srcCompat="@drawable/doctor_profile_picture" />
+
+    <Button
+        android:id="@+id/saved_drugs_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sign_in"
+        android:fontFamily="@font/open_sans"
+        android:text="Saved Drugs"
+        android:textSize="12dp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.105"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/banner"
+        app:layout_constraintVertical_bias="0.924" />
+
+    <Button
+        android:id="@+id/medical_history_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sign_in"
+        android:fontFamily="@font/open_sans"
+        android:text="Medical History"
+        android:textSize="12dp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.933"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/banner"
+        app:layout_constraintVertical_bias="0.768" />
+
+    <TextView
+        android:id="@+id/name_label"
+        android:layout_width="149dp"
+        android:layout_height="20dp"
+        android:hint="Name"
+        app:layout_constraintBottom_toTopOf="@+id/medical_history_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.202"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/banner"
+        app:layout_constraintVertical_bias="0.146" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="13.01dp"
+        android:layout_height="13.01dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/name_label"
+        app:layout_constraintHorizontal_bias="0.78"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.535"
+        app:srcCompat="@drawable/circle_icon" />
+
+    <ImageView
+        android:id="@+id/profile_icon1"
+        android:layout_width="22.53dp"
+        android:layout_height="13.96dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.07"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/profile_icon2" />
+
+    <TextView
+        android:id="@+id/name_text"
+        android:layout_width="235dp"
+        android:layout_height="20dp"
+        android:text="John Doe"
+        android:textColor="@color/dark_blue"
+        app:layout_constraintBottom_toTopOf="@+id/medical_history_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.301"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.69" />
+
+    <TextView
+        android:id="@+id/email_label"
+        android:layout_width="149dp"
+        android:layout_height="20dp"
+        android:hint="Email"
+        app:layout_constraintBottom_toTopOf="@+id/medical_history_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.202"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_text"
+        app:layout_constraintVertical_bias="0.099" />
+
+    <ImageView
+        android:id="@+id/email_icon"
+        android:layout_width="23dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/saved_drugs_button"
+        app:layout_constraintEnd_toStartOf="@+id/name_text"
+        app:layout_constraintHorizontal_bias="0.866"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.794"
+        app:srcCompat="@drawable/mail_icon" />
+
+    <TextView
+        android:id="@+id/email_address_text"
+        android:layout_width="235dp"
+        android:layout_height="20dp"
+        android:fontFamily="@font/open_sans"
+        android:text="johnxdoe@medkit.com"
+        android:textColor="@color/dark_blue"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@+id/medical_history_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.031"
+        app:layout_constraintStart_toEndOf="@+id/email_icon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.794" />
+
+    <TextView
+        android:id="@+id/phone_label"
+        android:layout_width="149dp"
+        android:layout_height="20dp"
+        android:hint="Phone no."
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.202"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email_address_text"
+        app:layout_constraintVertical_bias="0.107" />
+
+    <TextView
+        android:id="@+id/phone_number_text"
+        android:layout_width="235dp"
+        android:layout_height="20dp"
+        android:fontFamily="@font/open_sans"
+        android:text="5255 458 5485"
+        android:textColor="@color/dark_blue"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.301"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phone_label"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/phone_icon"
+        android:layout_width="23dp"
+        android:layout_height="22.9dp"
+        app:layout_constraintBottom_toTopOf="@+id/saved_drugs_button"
+        app:layout_constraintEnd_toStartOf="@+id/phone_label"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email_icon"
+        app:layout_constraintVertical_bias="0.4"
+        app:srcCompat="@drawable/profile_phone_icon" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

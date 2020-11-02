@@ -10,4 +10,7 @@
     <color name="colorBlueMidnight">#003366</color>
     <color name="colorGrey">#C9C9C9</color>
     <color name="colorWhite">#FFFFFF</color>
+    <color name="colorAsh">#CECED6</color>
+    <color name="colorRed">#ED1E23</color>
+    <color name="cardColor">#4DCECED6</color>
 </resources>
